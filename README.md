@@ -29,7 +29,7 @@ List the dependencies of the Analysis-functionality.
 1. Access to the Server containing the telemetrics in a csv file
 2. Opening/Reading CSV file
 3. Date & Time access dependenices in microcontroller
-4. Data Creation compactability for PDF
+4. Data structure Creation compactability for PDF
 5. Converting Data into PDF format
 6. Access to the server to store the PDF
 7. Notification dependenices like Email means access to the platform
@@ -78,8 +78,8 @@ Enter one part that's real and another part that's faked/mocked.
 |--------------------------|--------------|-----------------------------|---
 Read input from server     | csv file     | internal data-structure     | Fake the server store
 Validate input             | csv data     | valid / invalid             | None - it's a pure function
-Notify report availability | _enter input | _enter output               | _enter fake or mock
-Report inaccessible server | _enter input | _enter output               | _enter fake or mock
-Find minimum and maximum   | _enter input | _enter output               | _enter fake or mock
-Detect trend               | _enter input | _enter output               | _enter fake or mock
-Write to PDF               | _enter input | _enter output               | _enter fake or mock
+Notify report availability | PDF file stored | Notification function call counter              | Mock function with counter
+Report inaccessible server | Server address/port | Server accessable fail return               | Fack function to report server inaccessible
+Find minimum and maximum   | csv data | Internal Data structure update               | None - it's a pure function
+Detect trend               | csv data |Internal Data structure update               | None - it's a pure function
+Write to PDF               | Internal data structure | PDF converter function call counter              | Mock function with counter
