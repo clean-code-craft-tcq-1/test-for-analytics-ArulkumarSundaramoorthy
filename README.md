@@ -2,7 +2,6 @@
 
 Design tests for Analytics functionality on a Battery Monitoring System.
 
-Fill the parts marked '_enter' in the **Tasks** section below.
 
 ## Analysis-functionality to be tested
 
@@ -27,8 +26,12 @@ Notification must be sent when a new report is available.
 List the dependencies of the Analysis-functionality.
 
 1. Access to the Server containing the telemetrics in a csv file
-1. _enter dependency
-1. _enter dependency
+2. Opening/Reading CSV file
+3. Date & Time access dependenices in microcontroller
+4. Data structure Creation compactability for PDF
+5. Converting Data into PDF format
+6. Access to the server to store the PDF
+7. Notification dependenices like Email means access to the platform
 
 (add more if needed)
 
@@ -40,10 +43,10 @@ What is included in the software unit-test? What is not? Fill this table.
 |---------------------------|---------------|---
 Battery Data-accuracy       | No            | We do not test the accuracy of data
 Computation of maximum      | Yes           | This is part of the software being developed
-Off-the-shelf PDF converter | _enter Yes/No | _enter reasoning
-Counting the breaches       | _enter Yes/No | _enter reasoning
-Detecting trends            | _enter Yes/No | _enter reasoning
-Notification utility        | _enter Yes/No | _enter reasoning
+Off-the-shelf PDF converter | Yes           | External Libraries software & Test the converter function called or not using mock/fake test function
+Counting the breaches       | Yes           | This is part of the software being developed
+Detecting trends            | Yes           | This is part of the software being developed
+Notification utility        | Yes           | External Libraries software & Test the utility function called or not using mock/fake test function
 
 ### List the Test Cases
 
@@ -52,9 +55,15 @@ Write tests in the form of `<expected output or action>` from `<input>` / when `
 Add to these tests:
 
 1. Write minimum and maximum to the PDF from a csv containing positive and negative readings
-1. Write "Invalid input" to the PDF when the csv doesn't contain expected data
-1. _enter a test
-1. _enter a test
+2. Write "Invalid input" to the PDF when the csv doesn't contain expected data
+3. Write a test case to test true notifications, when new report available
+4. Write a test case to test false notifications
+5. Write a test case to test PDF report generated once in a week
+6. Test the record trends, if reading increasing continuously for 30 mins
+7. Test the Date & Time are correctly updating
+8. Write a test case to count the maximum breach
+9. Write a test case to count the minimum breach
+10. Write a test case to count combination of minimum & maximum breach
 
 (add more)
 
@@ -68,8 +77,8 @@ Enter one part that's real and another part that's faked/mocked.
 |--------------------------|--------------|-----------------------------|---
 Read input from server     | csv file     | internal data-structure     | Fake the server store
 Validate input             | csv data     | valid / invalid             | None - it's a pure function
-Notify report availability | _enter input | _enter output               | _enter fake or mock
-Report inaccessible server | _enter input | _enter output               | _enter fake or mock
-Find minimum and maximum   | _enter input | _enter output               | _enter fake or mock
-Detect trend               | _enter input | _enter output               | _enter fake or mock
-Write to PDF               | _enter input | _enter output               | _enter fake or mock
+Notify report availability | PDF file stored | Notification function call counter              | Mock function with counter
+Report inaccessible server | Server address/port | Server accessable fail return               | Fack function to report server inaccessible
+Find minimum and maximum   | csv data | Internal Data structure update               | None - it's a pure function
+Detect trend               | csv data |Internal Data structure update               | None - it's a pure function
+Write to PDF               | Internal data structure | PDF converter function call counter              | Mock function with counter
