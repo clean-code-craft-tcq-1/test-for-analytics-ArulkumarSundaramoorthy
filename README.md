@@ -65,8 +65,6 @@ Add to these tests:
 8. Write a test case to count the maximum breach
 9. Write a test case to count the minimum breach
 10. Write a test case to count combination of minimum & maximum breach
-11. Check the minimum breach from CSV
-12. Check the maximum breach from CSV
 
 (add more)
 
