@@ -27,8 +27,12 @@ Notification must be sent when a new report is available.
 List the dependencies of the Analysis-functionality.
 
 1. Access to the Server containing the telemetrics in a csv file
-1. _enter dependency
-1. _enter dependency
+2. Opening/Reading CSV file
+3. Date & Time access dependenices in microcontroller
+4. Data Creation compactability for PDF
+5. Converting Data into PDF format
+6. Access to the server to store the PDF
+7. Notification dependenices like Email means access to the platform
 
 (add more if needed)
 
