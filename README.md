@@ -44,7 +44,7 @@ What is included in the software unit-test? What is not? Fill this table.
 |---------------------------|---------------|---
 Battery Data-accuracy       | No            | We do not test the accuracy of data
 Computation of maximum      | Yes           | This is part of the software being developed
-Off-the-shelf PDF converter | Yes           | External Libraries software & Test the conerter function called or not using mock/fake test function
+Off-the-shelf PDF converter | Yes           | External Libraries software & Test the converter function called or not using mock/fake test function
 Counting the breaches       | Yes           | This is part of the software being developed
 Detecting trends            | Yes           | This is part of the software being developed
 Notification utility        | Yes           | External Libraries software & Test the utility function called or not using mock/fake test function
