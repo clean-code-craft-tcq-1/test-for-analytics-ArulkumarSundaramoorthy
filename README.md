@@ -44,10 +44,10 @@ What is included in the software unit-test? What is not? Fill this table.
 |---------------------------|---------------|---
 Battery Data-accuracy       | No            | We do not test the accuracy of data
 Computation of maximum      | Yes           | This is part of the software being developed
-Off-the-shelf PDF converter | Yes           | External Libraries software & Test using mock/fake test function
+Off-the-shelf PDF converter | Yes           | External Libraries software & Test the conerter function called or not using mock/fake test function
 Counting the breaches       | Yes           | This is part of the software being developed
 Detecting trends            | Yes           | This is part of the software being developed
-Notification utility        | Yes           | External Libraries software & Test using mock/fake test function
+Notification utility        | Yes           | External Libraries software & Test the utility function called or not using mock/fake test function
 
 ### List the Test Cases
 
@@ -56,9 +56,17 @@ Write tests in the form of `<expected output or action>` from `<input>` / when `
 Add to these tests:
 
 1. Write minimum and maximum to the PDF from a csv containing positive and negative readings
-1. Write "Invalid input" to the PDF when the csv doesn't contain expected data
-1. _enter a test
-1. _enter a test
+2. Write "Invalid input" to the PDF when the csv doesn't contain expected data
+3. Write a test case to test true notifications, when new report available
+4. Write a test case to test false notifications
+5. Write a test case to test PDF report generated once in a week
+6. Test the record trends, if reading increasing continuously for 30 mins
+7. Test the Date & Time are correctly updating
+8. Write a test case to count the maximum breach
+9. Write a test case to count the minimum breach
+10. Write a test case to count combination of minimum & maximum breach
+11. Check the minimum breach from CSV
+12. Check the maximum breach from CSV
 
 (add more)
 
